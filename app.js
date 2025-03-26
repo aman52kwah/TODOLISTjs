@@ -26,7 +26,7 @@ function(){
     task.appendChild(deleteButton);
 
 
-    //validate task to 
+    //validate task to if notthingis typed
     if (inputTask.value === "") {
         alert('Pleasae Enter a Task')
     } else{
@@ -36,12 +36,15 @@ function(){
 
     inputTask.value= "";
 
+
+    // use event listener to to complete task
     checkButton.addEventListener('click',function(){
         checkButton.parentElement.style.textDecoration = 
         "line-through";
     });
 
 
+    // use event listener to delete task with event propagation
     deleteButton.addEventListener('click', function(e){
 
 
